@@ -1,0 +1,92 @@
+# AWS Infrastructure Automation with Terraform
+
+## Overview
+This project provisions modular AWS infrastructure using Terraform following Infrastructure as Code (IaC) best practices.
+
+It includes reusable modules for networking, compute, security, storage, databases, and identity management.
+
+## Project Structure
+
+```text
+Terraform AWS Infra/
+│
+├── dev/
+│   ├── main.tf
+│   ├── variable.tf
+│   └── terraform.tfvars
+│
+└── modules/
+    ├── vpc/
+    ├── sg/
+    ├── ec2/
+    ├── alb/
+    ├── rds/
+    ├── s3/
+    └── iam/
+```
+
+## Infrastructure Components
+
+### Networking
+- Custom VPC module
+- Public/private subnet architecture
+- Route tables and gateways
+
+### Security
+- Modular security group configuration
+- IAM roles, policies, and access controls
+
+### Compute
+- EC2 provisioning
+- Auto Scaling support
+- Launch template configuration
+
+### Load Balancing
+- Application Load Balancer
+- Target groups and listeners
+
+### Storage & Database
+- Encrypted S3 bucket provisioning
+- RDS deployment in private subnets
+
+## Terraform Modules
+This project uses reusable Terraform modules for:
+
+- **vpc** — networking foundation  
+- **sg** — security groups  
+- **ec2** — compute resources  
+- **alb** — load balancing  
+- **rds** — relational database  
+- **s3** — object storage  
+- **iam** — identity and access management  
+
+## Deployment
+
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+
+Run from:
+
+```bash
+cd dev/
+```
+
+## Technologies Used
+- Terraform
+- AWS EC2
+- AWS VPC
+- AWS ALB
+- AWS RDS
+- AWS S3
+- AWS IAM
+
+## Skills Demonstrated
+- Infrastructure as Code (IaC)
+- Cloud Architecture
+- Terraform Module Development
+- AWS Networking
+- Security and IAM
+- DevOps Automation
