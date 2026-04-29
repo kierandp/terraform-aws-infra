@@ -112,7 +112,7 @@ variable "alb_configs" {
   type = map(object({
     name           = string
     subnet_keys    = list(string)
-    security_group = string # key from sg_ids (e.g. "alb")
+    security_group = string 
     target_port    = number
     listener_port  = number
     tags           = map(string)
