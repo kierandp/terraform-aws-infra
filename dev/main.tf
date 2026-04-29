@@ -14,7 +14,7 @@ s3_configs = var.s3_configs
 
 terraform {
   backend "s3" {
-    bucket = "my-s3-bucket-firstproject-backend-state-v2"
+    bucket = "my-s3-bucket-firstproject-backend-state-v3"
     key    = "path/to/my/key"
     region = "ap-southeast-1"
     use_lockfile = false
