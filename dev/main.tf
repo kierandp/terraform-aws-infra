@@ -18,7 +18,7 @@ terraform {
     key    = "path/to/my/key"
     region = "ap-southeast-1"
     use_lockfile = true
-    encrpyt = true
+    encrypt = true
   }
 }
 
