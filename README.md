@@ -9,7 +9,7 @@ It deploys a highly available, scalable multi-tier architecture with automated C
 
 ##  Architecture
 
-          Internet
+Internet
               ↓
    Application Load Balancer (ALB)
               ↓
