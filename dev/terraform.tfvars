@@ -174,7 +174,7 @@ alb_configs = {
     security_group = "alb"
     target_port    = 80
     listener_port  = 80
-      tags = {
+    tags = {
       env = "dev"
     }
 

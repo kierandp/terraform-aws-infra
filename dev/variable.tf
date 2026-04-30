@@ -27,7 +27,7 @@ variable "s3_configs" {
     public_access_block = bool
     enable_encryption   = bool
     force_destroy       = bool
-    tags = map(string)
+    tags                = map(string)
 
   }))
 }
@@ -111,7 +111,7 @@ variable "alb_configs" {
   type = map(object({
     name           = string
     subnet_keys    = list(string)
-    security_group = string 
+    security_group = string
     target_port    = number
     listener_port  = number
     tags           = map(string)
