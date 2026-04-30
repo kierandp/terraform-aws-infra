@@ -17,7 +17,8 @@ terraform {
     bucket = "my-s3-bucket-firstproject-backend-state-v3"
     key    = "path/to/my/key"
     region = "ap-southeast-1"
-    use_lockfile = false
+    use_lockfile = true
+    encrpyt = true
   }
 }
 

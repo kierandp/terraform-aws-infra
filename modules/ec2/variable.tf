@@ -2,7 +2,6 @@ variable "ec2_configs" {
   type = map(object({
     name          = string
     instance_type = string
-    subnet_key    = string
     iam_role_key  = string
     sg_keys       = list(string)
   }))
