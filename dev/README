@@ -25,7 +25,7 @@ Terraform AWS Infra/
     └── iam/
 ```
 
-## Infrastructure Components
+## Infrastructure Component
 
 ### Networking
 - Custom VPC module
