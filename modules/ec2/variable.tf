@@ -26,4 +26,3 @@ variable "iam_instance_profiles" {
 variable "target_group_arn" {
   type = map(string)
 }
-
