@@ -20,5 +20,9 @@ variable "private_subnets" {
 }
 
 variable "sg_ids" {
-  type = map(string)
+  type = map(object({
+    app = string
+    alb = string
+    rds = string
+  }))
 }

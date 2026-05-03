@@ -12,10 +12,14 @@ variable "private_subnets" {
 }
 
 variable "sg_ids" {
-  type = map(string)
+  type = map(object({
+    app = string
+    alb = string
+    rds = string
+  }))
 }
 
-variable "iam_role_arns" {
+  variable "iam_role_arns" {
   type = map(string)
 }
 
