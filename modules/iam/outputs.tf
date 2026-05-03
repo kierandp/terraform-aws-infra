@@ -1,6 +1,7 @@
 output "role_arns" {
   value = {
-    dev = aws_iam_role.s3_backend_role["dev"].arn
+    for k, r in aws_iam_role.s3_backend_role :
+    k => r.arn
   }
 }
 

@@ -8,7 +8,7 @@ output "vpc_ids" {
 output "private_subnets" {
   value = {
     for k, s in aws_subnet.private :
-    k => s.id
+    s.tags["Name"] => s.id
   }
 }
 

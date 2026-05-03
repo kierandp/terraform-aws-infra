@@ -1,7 +1,10 @@
 output "sg_ids" {
   value = {
-    app = aws_security_group.app["dev"].id
-    alb = aws_security_group.alb["dev"].id
-    rds = aws_security_group.rds["dev"].id
+    for k in keys(var.sg_configs) :
+    k => {
+      app = aws_security_group.app[k].id
+      alb = aws_security_group.alb[k].id
+      rds = aws_security_group.rds[k].id
+    }
   }
 }

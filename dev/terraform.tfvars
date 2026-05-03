@@ -100,6 +100,7 @@ iam_configs = {
     }
   }
 }
+
 # ------------------------------------------------------------------------------
 # RDS ARCHITECTURE
 # ------------------------------------------------------------------------------
@@ -153,7 +154,6 @@ ec2_configs = {
   dev = {
     name          = "dev-server"
     instance_type = "t3.micro"
-    subnet_key    = "dev-private-0"
     iam_role_key  = "dev"
     sg_keys       = ["app"]
     tags = {

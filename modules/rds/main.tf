@@ -13,8 +13,10 @@ resource "aws_db_instance" "first_project_db" {
   username = each.value.username
   password = each.value.password
 
-vpc_security_group_ids = [var.sg_ids["rds"]]
-
+  vpc_security_group_ids = [
+  var.sg_ids[each.key]["rds"]
+  ]
+  
   db_subnet_group_name = aws_db_subnet_group.db[each.key].name
 
   skip_final_snapshot = true

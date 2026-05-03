@@ -23,13 +23,12 @@
 
 
     vpc_security_group_ids = [
-    var.sg_ids["app"]
-  ]
+    var.sg_ids[each.key]["app"]
+    ]
 
-    iam_instance_profile {
-      name = var.iam_instance_profiles[each.value.iam_role_key]
-    }
-
+iam_instance_profile {
+  name = var.iam_instance_profiles[each.key]
+}
     tag_specifications {
       resource_type = "instance"
 
