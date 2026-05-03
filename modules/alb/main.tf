@@ -6,8 +6,8 @@ resource "aws_lb" "alb" {
   load_balancer_type = "application"
 
   security_groups = [
-  var.sg_ids["alb"]
-]
+    var.sg_ids["alb"]
+  ]
 
   subnets = [
     for s in each.value.subnet_keys :
