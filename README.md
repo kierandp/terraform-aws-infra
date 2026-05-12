@@ -23,6 +23,7 @@ Internet
 
 * High Availability → Multi-AZ deployment
 * Scalability → Auto Scaling Groups with dynamic policies
+* Observability → CloudWatch metric alarms for real-time monitoring and automated remediation
 * Security → Private subnets, IAM roles, security groups
 * Modularity → Reusable Terraform modules
 * Automation → CI/CD pipeline for infrastructure deployment
@@ -68,6 +69,12 @@ Terraform AWS Infra/
 * Integrated with ALB target groups
 * CPU-based scaling via CloudWatch alarms
 
+### Observability and Monitoring
+* Amazon CloudWatch metric alarms monitor EC2 CPU utilization
+* CPU utilization above 70% triggers scale-out policies
+* CPU utilization below 30% triggers scale-in policies
+* Enables automated remediation and cost optimization
+* Provides real-time operational monitoring
 
 ### Load Balancing (ALB)
 
@@ -145,6 +152,7 @@ terraform apply
 * Terraform
 * AWS EC2 (Auto Scaling, Launch Templates)
 * AWS VPC (Subnets, Routing)
+* AWS Cloudwatch
 * AWS ALB (Load Balancing)
 * AWS RDS (Database)
 * AWS S3 (Storage)
