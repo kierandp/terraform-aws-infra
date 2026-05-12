@@ -70,6 +70,7 @@ Terraform AWS Infra/
 * CPU-based scaling via CloudWatch alarms
 
 ### Observability and Monitoring
+
 * Amazon CloudWatch metric alarms monitor EC2 CPU utilization
 * CPU utilization above 70% triggers scale-out policies
 * CPU utilization below 30% triggers scale-in policies
